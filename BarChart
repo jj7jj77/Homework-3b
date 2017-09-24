@@ -1,0 +1,39 @@
+/*The Huntington High School basketball team 
+has five players named Art, Bob, Cal,
+Dan, and Eli. Accept the number of points 
+scored by each player in a game and create
+a bar chart that illustrates the points scored.*/
+
+package javaclasshomework3;
+import java.util.Scanner;
+public class BarChart 
+{
+    public static void main(String[] args) 
+    { 
+        Scanner input = new Scanner (System.in);
+        
+        String PlayerName[]={"Art","Bob","Cal","Dan","Eli"};
+        int PlayerScores[] = new int[5];
+        
+        System.out.print("How many points did Art scored? ");
+        PlayerScores[0] = input.nextInt();
+        System.out.print("How many points did Bob scored? ");
+        PlayerScores[1] = input.nextInt();
+        System.out.print("How many points did Cal scored? ");
+        PlayerScores[2] = input.nextInt();
+        System.out.print("How many points did Dan scored? ");
+        PlayerScores[3] = input.nextInt();
+        System.out.print("How many points did Eli scored? ");
+        PlayerScores[4] = input.nextInt();
+        int i;
+        for(i=0; i<PlayerName.length; i++)
+        {
+            System.out.println(PlayerName[i] + " ");
+            for (int k=0; k<PlayerScores[i]; k++)
+            {
+                System.out.println("*");
+            }
+        }
+        System.out.println();
+    }
+}
